@@ -7,5 +7,7 @@ urlpatterns = [
 	url(r'^$', views.post_list, name='post_list'),
 	#'?P<post_id>'表示会将此处的内容放置在post_id变量中，并传递给视图
 	#'[0-9]'+表示至少一个数字
-	url(r'^post/(?P<post_id>[0-9]+)/$', views.post_detail, name='post_detail')
+	url(r'^post/(?P<post_id>[0-9]+)/$', views.post_detail, name='post_detail'),
+	url(r'^post/new/$', views.post_new, name='post_new'),
+	url(r'^post/(?P<post_id>[0-9]+)/edit/$', views.post_edit, name='post_edit')
 ]
